@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB BACKGROUND</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div onchange="onChange()">
+        <input type="number" id="numberRed"  value="0" min="0" max="255"></input>
+        <input type="number" id="numberGreen" value="0" min="0" max="255"></input>
+        <input type="number" id="numberBlue" value="0" min="0" max="255"></input>
+    </div>
+
+    
+
+    <script>
+        const onChange = () => {
+            const r = document.getElementById("numberRed").value;
+            const g = document.getElementById("numberGreen").value;
+            const b = document.getElementById("numberBlue").value;
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }     
+    </script>
+</body>
+</html>
